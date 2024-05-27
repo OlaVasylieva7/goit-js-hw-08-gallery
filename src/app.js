@@ -64,6 +64,7 @@ const galleryItems = [
   },
 ];
 
+
 const galleryItemsList = document.querySelector("ul.js-gallery");
 
 const galleryItemMarkup = galleryItems
@@ -75,6 +76,9 @@ const galleryItemMarkup = galleryItems
   </li>`;
   })
   .join("");
+
+
+
 
 galleryItemsList.insertAdjacentHTML("afterbegin", galleryItemMarkup);
 
@@ -98,6 +102,9 @@ closeModalBtn.addEventListener("click", (event) => {
   closeModal();
 });
 
+
+
+
 const allGalleryItems = document.querySelectorAll("li.gallery__item");
 
 allGalleryItems.forEach((elem) => {
@@ -114,6 +121,9 @@ allGalleryItems.forEach((elem) => {
   });
 });
 
+
+
+
 // extra
 
 overlay.addEventListener("click", (event) => {
@@ -124,6 +134,8 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeModal();
   }
+
+
 
   const itemIndex = galleryItems.findIndex((item) => {
     return item.original === modalImage.src;
